@@ -1,0 +1,28 @@
+# Виртуальное окружение
+venv/
+.venv/
+*/venv/
+*/.venv/
+Scripts/
+bin/
+Include/
+Lib/
+pyvenv.cfg
+
+# Файлы Python
+__pycache__/
+*.py[cod]
+*.so
+*.egg-info/
+dist/
+build/
+
+# Файлы IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Логи и временные файлы
+*.log
+*.tmp
