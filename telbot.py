@@ -1,9 +1,12 @@
 from telegram import Update
 from telegram.ext import Application, CommandHandler, ContextTypes
 import requests
+import os
+from dotenv import load_dotenv
 
 # Токен вашего бота
-TOKEN = '7150228045:AAEjibrtdZ1us5UxI-uFpKQUCXMDjLSz_G4'
+load_dotenv()
+mytoken = os.getenv('key')
 
 # Обработчик команды /start
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
@@ -24,7 +27,7 @@ async def convert(update: Update, context: ContextTypes.DEFAULT_TYPE):
 # Основная функция
 def main():
     # Создаем приложение
-    application = Application.builder().token(TOKEN).build()
+    application = Application.builder().token(mytoken).build()
 
     # Регистрируем обработчики команд
     application.add_handler(CommandHandler('start', start))
